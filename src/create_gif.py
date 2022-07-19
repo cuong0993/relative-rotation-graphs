@@ -3,8 +3,8 @@ import imageio
 import glob
 from rrg_db import DatabaseManager
 
-png_dir = "src/plots"
-gif_dir = "src/gifs"
+png_dir = "plots"
+gif_dir = "gifs"
 config = DatabaseManager().get_config()
 
 images = []
@@ -13,7 +13,7 @@ for file_name in sorted(os.listdir(png_dir)):
         file_path = os.path.join(png_dir, file_name)
         images.append(imageio.imread(file_path))
 imageio.mimsave(
-    "src/gifs/" + config["filename"] + "_" + str(len(os.listdir(gif_dir)) + 1) + ".gif",
+    "gifs/" + config["filename"] + "_" + str(len(os.listdir(gif_dir)) + 1) + ".gif",
     images,
     duration=config["gif_frame_time_delay"],
 )

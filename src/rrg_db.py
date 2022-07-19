@@ -5,15 +5,15 @@ import json
 class DatabaseManager:
     def __init__(self):
         self.conn = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            passwd="root",
+            host="168.138.174.255",
+            user="user",
+            passwd="P@ssw0rd",
             database="relativerotationgraphs",
         )
         self.cursor = self.conn.cursor()
 
     def get_config(self):
-        return json.loads(open("src/config.json", "r").read())
+        return json.loads(open("config.json", "r").read())
 
     def drop_table(self):
         self.cursor.execute("DROP TABLE IF EXISTS rrg_data")

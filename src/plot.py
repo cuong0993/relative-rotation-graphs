@@ -83,5 +83,5 @@ for i in range(config["history_range"]):
     if int(number) < 10 and config["history_range"] >= 10:
         number = "0" + number
 
-    plt.savefig("src/plots/" + config["filename"] + "_" + number + ".png")
+    plt.savefig("plots/" + config["filename"] + "_" + number + ".png")
     plt.close()

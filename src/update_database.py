@@ -9,7 +9,7 @@ db.create_table()
 config = db.get_config()
 config["symbols"].append(config["compare_to"])
 
-apikey = open("apikey.txt", "r").read()
+apikey = "LZ90ZS5VQG18GRXB"
 dataKey = "Weekly Time Series"
 valueKey = "4. close"
 

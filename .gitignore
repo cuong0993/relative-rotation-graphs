@@ -1,5 +1,4 @@
 apikey.txt
 venv/
 __pycache__/
-src/plots/*.png
-src/gifs/*.gif
+/.idea
